@@ -410,7 +410,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/media/biooids/WD/CS50/projects/2-DIY/neonoid/server/prisma/generated/prisma",
+      "value": "/media/biooids/WD/CS50/projects/2-DIY/doityourself/server/prisma/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -424,11 +424,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/media/biooids/WD/CS50/projects/2-DIY/neonoid/server/prisma/schema.prisma",
+    "sourceFilePath": "/media/biooids/WD/CS50/projects/2-DIY/doityourself/server/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",

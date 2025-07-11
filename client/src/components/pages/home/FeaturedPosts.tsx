@@ -56,7 +56,7 @@ export default function FeaturedPosts() {
 
       <div className="mt-12">
         <Button asChild variant="secondary" size="lg">
-          <Link href="/posts">
+          <Link href="/all">
             View All Posts <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>

@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const post_controller_js_1 = require("../../features/post/post.controller.js");
+const auth_middleware_js_1 = require("../../middleware/auth.middleware.js");
+const validate_js_1 = require("../../middleware/validate.js");
+const post_validation_js_1 = require("../../features/post/post.validation.js");
+const multer_config_js_1 = require("../../middleware/multer.config.js");
+const router = (0, express_1.Router)();
+router.get("/", post_controller_js_1.postController.getAllPosts);
+router.get("/:id", post_controller_js_1.postController.getPost);
+router.use(auth_middleware_js_1.verifyToken);
+router.post("/", multer_config_js_1.uploadImage.array("postImages", 5), (0, validate_js_1.validate)(post_validation_js_1.createPostSchema), post_controller_js_1.postController.createPost);
+router.patch("/:id", multer_config_js_1.uploadImage.array("postImages", 5), (0, validate_js_1.validate)(post_validation_js_1.updatePostSchema), post_controller_js_1.postController.updatePost);
+router.delete("/:id", post_controller_js_1.postController.deletePost);
+router.post("/:id/like", post_controller_js_1.postController.likePost);
+router.delete("/:id/like", post_controller_js_1.postController.unlikePost);
+router.post("/:id/save", post_controller_js_1.postController.savePost);
+router.delete("/:id/save", post_controller_js_1.postController.unsavePost);
+router.post("/:id/share", post_controller_js_1.postController.sharePost);
+router.post("/:id/view", post_controller_js_1.postController.recordPostView);
+exports.default = router;
+//# sourceMappingURL=post.routes.js.map

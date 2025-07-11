@@ -1,0 +1,1 @@
+      <ProfilePostList posts={user.posts} userName="My" />

@@ -1,0 +1,1 @@
+{"version":3,"file":"update.types.d.ts","sourceRoot":"","sources":["../../../src/features/updates/update.types.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,cAAc,EAAE,MAAM,kCAAkC,CAAC;AAElE,MAAM,WAAW,eAAe;IAC9B,KAAK,EAAE,MAAM,CAAC;IACd,OAAO,EAAE,MAAM,CAAC;IAChB,QAAQ,EAAE,cAAc,CAAC;IACzB,OAAO,CAAC,EAAE,MAAM,CAAC;CAClB;AAED,MAAM,WAAW,eAAgB,SAAQ,OAAO,CAAC,eAAe,CAAC;CAAG"}

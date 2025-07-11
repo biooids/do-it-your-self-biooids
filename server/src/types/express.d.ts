@@ -1,6 +1,6 @@
 // src/types/express.d.ts
 
-import { SystemRole, UserStatus } from "../../prisma/generated/prisma";
+import { SystemRole, UserStatus } from "@/prisma-client";
 
 // This line is important for declaration merging to work correctly.
 export {};

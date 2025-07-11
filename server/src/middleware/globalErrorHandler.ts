@@ -1,10 +1,12 @@
+//src/middleware/globalErrorHandler.ts
+
 import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
 import { JsonWebTokenError, TokenExpiredError } from "jsonwebtoken";
-import { Prisma } from "../../prisma/generated/prisma";
+import { Prisma } from "@/prisma-client";
 import { config } from "../config/index.js";
 import { HttpError } from "../utils/HttpError.js";
-import { logger } from "@/config/logger";
-import { MulterError } from "multer"; // <-- 1. Import MulterError to check its type
+import { logger } from "../config/logger.js";
+import { MulterError } from "multer";
 
 export const globalErrorHandler: ErrorRequestHandler = (
   err: unknown,

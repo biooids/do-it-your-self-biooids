@@ -1,5 +1,5 @@
 import prisma from "@/db/prisma.js";
-import { GuideStep } from "../../../prisma/generated/prisma";
+import { GuideStep } from "@/prisma-client";
 import { createHttpError } from "@/utils/error.factory.js";
 import { CreateGuideStepDto, UpdateGuideStepDto } from "./guideStep.types";
 

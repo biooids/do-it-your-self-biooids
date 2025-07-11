@@ -1,13 +1,13 @@
 import bcrypt from "bcryptjs";
-import prisma from "@/db/prisma.js";
-import { User } from "../../../prisma/generated/prisma";
-import { createHttpError } from "@/utils/error.factory.js";
-import { logger } from "@/config/logger.js";
+import prisma from "../../db/prisma.js";
+import { User } from "@/prisma-client";
+import { createHttpError } from "../../utils/error.factory.js";
+import { logger } from "../../config/logger.js";
 import {
   generateAccessToken,
   generateAndStoreRefreshToken,
   verifyAndValidateRefreshToken,
-} from "@/utils/jwt.utils.js";
+} from "../../utils/jwt.utils.js";
 import {
   SignUpInputDto,
   LoginInputDto,
@@ -15,7 +15,7 @@ import {
   AuthTokens,
   LogoutInputDto,
   ChangePasswordInputDto, // Ensure this type is defined in your types file
-} from "@/types/auth.types.js";
+} from "../../types/auth.types.js";
 import { userService } from "../user/user.service.js";
 
 // Helper to remove password hash before returning user object

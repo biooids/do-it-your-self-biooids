@@ -2,7 +2,7 @@ import multer, { FileFilterCallback } from "multer";
 import path from "path";
 import fs from "fs";
 import { Request } from "express";
-import { createHttpError } from "@/utils/error.factory.js";
+import { createHttpError } from "../utils/error.factory.js";
 
 // --- Generic Image Storage and Filter ---
 // This configuration can be reused for all image uploads in your application.

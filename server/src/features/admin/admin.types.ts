@@ -6,7 +6,7 @@ import {
   Comment,
   PostCategory,
   UserStatus,
-} from "../../../prisma/generated/prisma";
+} from "@/prisma-client";
 
 // Data shape for the main dashboard statistics card
 export interface AdminDashboardStats {

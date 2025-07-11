@@ -23,7 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
 
-    // --- Strictness & Code Quality (Core of a scalable app's safety net) ---
+    // --- Strictness & Code Quality ---
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -35,13 +35,12 @@
     "skipLibCheck": true,
     "isolatedModules": true,
 
-    // --- Path Aliases (Highly recommended for larger projects) ---
-    "baseUrl": "./",
+    // --- CORRECT PATH ALIASES SETUP ---
+    "rootDir": "src",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"] // Example: import foo from '@/components/foo' instead of '../../components/foo'
-      // You can add more specific paths if needed:
-      // "@components/*": ["src/components/*"],
-      // "@utils/*": ["src/utils/*"],
+      "@/*": ["*"],
+      "@/prisma-client": ["../prisma/generated/prisma"]
     },
 
     // --- Type Acquisition ---

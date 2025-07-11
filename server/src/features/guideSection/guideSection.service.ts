@@ -1,5 +1,5 @@
 import prisma from "@/db/prisma.js";
-import { Prisma, GuideSection } from "../../../prisma/generated/prisma";
+import { Prisma, GuideSection } from "@/prisma-client";
 import { createHttpError } from "@/utils/error.factory.js";
 import {
   uploadToCloudinary,

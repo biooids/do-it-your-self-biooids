@@ -1,6 +1,6 @@
 // src/features/updates/update.validation.ts
 import { z } from "zod";
-import { UpdateCategory } from "../../../prisma/generated/prisma";
+import { UpdateCategory } from "@/prisma-client";
 
 // Get the enum values directly from the Prisma type for safety
 const updateCategoryValues = Object.values(UpdateCategory) as [

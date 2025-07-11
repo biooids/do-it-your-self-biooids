@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { SystemRole, User } from "../../../prisma/generated/prisma";
-import { asyncHandler } from "@/middleware/asyncHandler.js";
-import { createHttpError } from "@/utils/error.factory.js";
+import { SystemRole, User } from "@/prisma-client";
+import { asyncHandler } from "../../middleware/asyncHandler.js";
+import { createHttpError } from "../../utils/error.factory.js";
 import { userService } from "./user.service.js";
-import { uploadToCloudinary } from "@/config/cloudinary.js";
-import { logger } from "@/config/logger.js";
+import { uploadToCloudinary } from "../../config/cloudinary.js";
+import { logger } from "../../config/logger.js";
 
 // This helper function is correctly placed and used.
 const sanitizeUserForResponse = (user: User): Omit<User, "hashedPassword"> => {

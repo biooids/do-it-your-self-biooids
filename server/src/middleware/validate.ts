@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { AnyZodObject, ZodError } from "zod";
-import { createHttpError } from "@/utils/error.factory.js";
+import { createHttpError } from "../utils/error.factory.js";
 
 /**
  * A middleware that validates the request against a provided Zod schema.

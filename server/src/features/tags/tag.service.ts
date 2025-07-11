@@ -1,7 +1,7 @@
 // server/src/features/tag/tag.service.js
 
 import prisma from "@/db/prisma.js";
-import { PostCategory, Prisma } from "../../../prisma/generated/prisma";
+import { PostCategory, Prisma } from "@/prisma-client";
 
 interface TagQueryFilters {
   category?: PostCategory;

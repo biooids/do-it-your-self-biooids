@@ -1,7 +1,7 @@
-import { asyncHandler } from "@/middleware/asyncHandler.js";
+import { asyncHandler } from "../../middleware/asyncHandler.js";
 import { Request, Response } from "express";
 import { authService } from "./auth.service.js";
-import { config } from "@/config/index.js";
+import { config } from "../../config/index.js";
 
 class AuthController {
   signup = asyncHandler(async (req: Request, res: Response) => {
@@ -89,12 +89,10 @@ class AuthController {
     await authService.changeUserPassword(userId, req.body);
 
     res.clearCookie(config.cookies.refreshTokenName);
-    res
-      .status(200)
-      .json({
-        status: "success",
-        message: "Password changed successfully. Please log in again.",
-      });
+    res.status(200).json({
+      status: "success",
+      message: "Password changed successfully. Please log in again.",
+    });
   });
 
   // --- ADDED: The missing logoutAll method ---
@@ -103,12 +101,10 @@ class AuthController {
     await authService.revokeAllRefreshTokensForUser(userId);
 
     res.clearCookie(config.cookies.refreshTokenName);
-    res
-      .status(200)
-      .json({
-        status: "success",
-        message: "Successfully logged out of all devices.",
-      });
+    res.status(200).json({
+      status: "success",
+      message: "Successfully logged out of all devices.",
+    });
   });
 }
 

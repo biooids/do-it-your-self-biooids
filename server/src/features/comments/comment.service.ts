@@ -18,7 +18,7 @@ import {
   Prisma,
   SystemRole,
   CommentReactionState,
-} from "../../../prisma/generated/prisma"; // Adjust path if needed
+} from "@/prisma-client"; // Adjust path if needed
 import { createHttpError } from "@/utils/error.factory";
 import {
   ProcessedCommentAPI,

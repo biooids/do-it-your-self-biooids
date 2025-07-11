@@ -1,7 +1,7 @@
 // src/features/admin/admin.service.ts
 
 import prisma from "@/db/prisma.js";
-import { User, Prisma, SystemRole } from "../../../prisma/generated/prisma";
+import { User, Prisma, SystemRole } from "@/prisma-client";
 import {
   AdminDashboardStats,
   AdminUserRow,

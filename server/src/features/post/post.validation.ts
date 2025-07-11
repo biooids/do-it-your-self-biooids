@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PostCategory } from "../../../prisma/generated/prisma";
+import { PostCategory } from "@/prisma-client";
 
 const postCategoryValues = Object.values(PostCategory) as [string, ...string[]];
 const preprocessTags = (val: unknown) => {

@@ -4,7 +4,7 @@ import jwt, {
   JsonWebTokenError,
 } from "jsonwebtoken";
 import crypto from "crypto";
-import { User } from "../../prisma/generated/prisma";
+import { User } from "@/prisma-client";
 import { config } from "../config/index.js";
 import prisma from "../db/prisma.js";
 import {

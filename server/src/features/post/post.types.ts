@@ -1,6 +1,6 @@
 // src/features/post/post.types.ts
 
-import { PostCategory } from "../../../prisma/generated/prisma";
+import { PostCategory } from "@/prisma-client";
 
 /**
  * Defines the shape of the filter object for querying multiple posts.

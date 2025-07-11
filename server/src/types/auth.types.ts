@@ -1,7 +1,7 @@
 // src/types/auth.types.ts
 
 import { JwtPayload as OriginalJwtPayload } from "jsonwebtoken";
-import { SystemRole } from "../../prisma/generated/prisma";
+import { SystemRole } from "@/prisma-client";
 
 // --- JWT Payloads ---
 export interface DecodedAccessTokenPayload {

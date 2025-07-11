@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import { globalErrorHandler } from "./middleware/globalErrorHandler.js";
 import { createHttpError } from "./utils/error.factory.js";
 import { corsOptions } from "./config/corsOptions.js";
-import apiRoutes from "@/features/apiRoutes.js";
+import apiRoutes from "./features/apiRoutes.js";
 
 //Express
 const app: Express = express();

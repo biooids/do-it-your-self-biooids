@@ -5,7 +5,7 @@ import { verifyToken } from "@/middleware/auth.middleware.js";
 import { requireRole } from "@/middleware/admin.middleware.js"; // Reusable role middleware
 import { validate } from "@/middleware/validate.js";
 import { createUpdateSchema, updateUpdateSchema } from "./update.validation.js";
-import { SystemRole } from "../../../prisma/generated/prisma"; // FIX: Import the SystemRole enum
+import { SystemRole } from "@/prisma-client"; // FIX: Import the SystemRole enum
 
 const router: Router = Router();
 

@@ -14,7 +14,7 @@ import { Request, Response, NextFunction } from "express";
 import { asyncHandler } from "@/middleware/asyncHandler";
 import { createHttpError } from "@/utils/error.factory";
 import { commentService } from "./comment.service";
-import { CommentReactionState } from "../../../prisma/generated/prisma"; // Adjust path as needed
+import { CommentReactionState } from "@/prisma-client"; // Adjust path as needed
 
 // Constants for validation
 const MAX_COMMENT_TEXT_LENGTH = 1000;

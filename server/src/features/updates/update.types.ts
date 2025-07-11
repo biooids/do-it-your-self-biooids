@@ -1,5 +1,5 @@
 // src/features/updates/update.types.ts
-import { UpdateCategory } from "../../../prisma/generated/prisma";
+import { UpdateCategory } from "@/prisma-client";
 
 export interface CreateUpdateDto {
   title: string;

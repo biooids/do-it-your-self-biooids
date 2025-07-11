@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { authController } from "@/features/auth/auth.controller.js";
-import { validate } from "@/middleware/validate.js"; // You will need to create this middleware
 import {
   changePasswordSchema,
   loginSchema,
   signupSchema,
-} from "@/features/auth/auth.validation.js";
-import { verifyToken } from "@/middleware/auth.middleware";
+} from "../auth/auth.validation.js";
+import { verifyToken } from "../../middleware/auth.middleware.js";
+import { authController } from "./auth.controller.js";
+import { validate } from "../../middleware/validate.js";
 
 const router: Router = Router();
 

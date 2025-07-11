@@ -8,7 +8,7 @@
  * to the Comment feature.
  */
 
-import { CommentReactionState } from "../../../prisma/generated/prisma"; // Adjust path as needed
+import { CommentReactionState } from "@/prisma-client"; // Adjust path as needed
 
 // The 'AuthenticatedRequest' interface has been DELETED.
 // It is no longer needed because we have a global type for req.user.

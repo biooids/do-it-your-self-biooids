@@ -1,12 +1,9 @@
 import { Router } from "express";
-import { postController } from "@/features/post/post.controller.js";
-import { verifyToken } from "@/middleware/auth.middleware.js";
-import { validate } from "@/middleware/validate.js";
-import {
-  createPostSchema,
-  updatePostSchema,
-} from "@/features/post/post.validation.js";
-import { uploadImage } from "@/middleware/multer.config.js";
+import { postController } from "../post/post.controller.js";
+import { verifyToken } from "../../middleware/auth.middleware.js";
+import { validate } from "../../middleware/validate.js";
+import { createPostSchema, updatePostSchema } from "../post/post.validation.js";
+import { uploadImage } from "../../middleware/multer.config.js";
 
 const router: Router = Router();
 

@@ -1,10 +1,10 @@
 import bcrypt from "bcryptjs";
-import { Prisma, User } from "prisma/generated/prisma";
-import prisma from "@/db/prisma.js";
-import { SignUpInputDto } from "@/types/auth.types.js";
-import { createHttpError } from "@/utils/error.factory.js";
-import { logger } from "@/config/logger.js";
-import { deleteFromCloudinary } from "@/config/cloudinary";
+import { Prisma, User } from "@/prisma-client";
+import prisma from "../../db/prisma.js";
+import { SignUpInputDto } from "../../types/auth.types.js";
+import { createHttpError } from "../../utils/error.factory.js";
+import { logger } from "../../config/logger.js";
+import { deleteFromCloudinary } from "../../config/cloudinary";
 
 interface UserProfileUpdateData {
   name?: string;

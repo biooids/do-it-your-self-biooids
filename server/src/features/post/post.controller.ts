@@ -1,10 +1,10 @@
-import { asyncHandler } from "@/middleware/asyncHandler.js";
+import { asyncHandler } from "../../middleware/asyncHandler.js";
 import { Request, Response } from "express";
 import { postService } from "./post.service.js";
-import { createHttpError } from "@/utils/error.factory.js";
-import { uploadToCloudinary } from "@/config/cloudinary.js";
-import { logger } from "@/config/logger.js";
-import { SharePlatform } from "../../../prisma/generated/prisma";
+import { createHttpError } from "../../utils/error.factory.js";
+import { uploadToCloudinary } from "../../config/cloudinary.js";
+import { logger } from "../../config/logger.js";
+import { SharePlatform } from "@/prisma-client";
 
 class PostController {
   createPost = asyncHandler(async (req: Request, res: Response) => {

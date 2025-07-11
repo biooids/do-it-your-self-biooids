@@ -1,9 +1,9 @@
-import { PrismaClient, Prisma } from "../../prisma/generated/prisma";
+import { PrismaClient, Prisma } from "@/prisma-client";
 import { config } from "../config/index.js";
 import { logger } from "../config/logger.js";
 
 // Make SystemRole available as an export if needed elsewhere
-export { SystemRole } from "../../prisma/generated/prisma";
+export { SystemRole } from "@/prisma-client";
 
 // 1. Create the base Prisma Client instance
 // The 'log' property here will still print to console in development,

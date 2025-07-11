@@ -4,7 +4,7 @@ import {
   SystemRole,
   Prisma,
   SharePlatform,
-} from "../../../prisma/generated/prisma";
+} from "@/prisma-client";
 import { createHttpError } from "@/utils/error.factory.js";
 import { logger } from "@/config/logger.js";
 import { deleteFromCloudinary } from "@/config/cloudinary.js";

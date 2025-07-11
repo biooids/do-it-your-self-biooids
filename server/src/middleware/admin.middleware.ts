@@ -1,6 +1,6 @@
 // src/middleware/admin.middleware.ts
 import { Request, Response, NextFunction } from "express";
-import { SystemRole } from "../../prisma/generated/prisma";
+import { SystemRole } from "@/prisma-client";
 import { createHttpError } from "@/utils/error.factory";
 
 /**

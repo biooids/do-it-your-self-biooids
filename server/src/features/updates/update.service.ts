@@ -1,6 +1,6 @@
 // src/features/updates/update.service.ts
 import prisma from "@/db/prisma";
-import { SystemRole } from "../../../prisma/generated/prisma";
+import { SystemRole } from "@/prisma-client";
 import { createHttpError } from "@/utils/error.factory";
 import { CreateUpdateDto, UpdateUpdateDto } from "./update.types";
 

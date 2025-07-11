@@ -1,4 +1,4 @@
-import { GuideStep } from "../../../prisma/generated/prisma";
+import { GuideStep } from "@/prisma-client";
 export type GuideStepDto = GuideStep;
 export interface CreateGuideStepDto {
   title: string;

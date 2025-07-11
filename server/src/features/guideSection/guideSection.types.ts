@@ -1,5 +1,5 @@
 // We now import the unified GuideSection type from Prisma
-import { GuideSection } from "../../../prisma/generated/prisma";
+import { GuideSection } from "@/prisma-client";
 
 // The DTO now represents a GuideSection
 export type GuideSectionDto = GuideSection;

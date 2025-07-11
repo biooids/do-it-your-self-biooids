@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 import { asyncHandler } from "@/middleware/asyncHandler.js";
 import { adminService } from "./admin.service.js";
 import { createHttpError } from "@/utils/error.factory.js";
-import { SystemRole } from "../../../prisma/generated/prisma";
+import { SystemRole } from "@/prisma-client";
 
 class AdminController {
   // GET /admin/stats

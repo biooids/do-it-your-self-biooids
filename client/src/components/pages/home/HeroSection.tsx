@@ -2,83 +2,82 @@
 
 import React from "react";
 import Link from "next/link";
+import { Users, Cpu, Globe, Boxes } from "lucide-react";
+
 import HeroAnimation from "./HeroAnimation";
-import FeaturedPosts from "./FeaturedPosts";
 import Background from "./Background";
 import TerminalMockUp from "./TerminalMockUp";
 import HeroHighlights from "./HeroHighlights";
+import FeaturedPosts from "./FeaturedPosts";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="w-full">
+    <section className="w-full ">
       <div className="relative overflow-hidden">
         <HeroAnimation />
         <Background />
 
         {/* MAIN HERO */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 min-h-screen px-6 md:px-12 py-12 text-center md:text-left max-w-7xl mx-auto">
-          {/* RIGHT: Headline + Description + Buttons */}
-          <div className="w-full md:w-1/2 space-y-6 relative">
-            {/* FLOATING DECORATIONS */}
-            <div className="absolute -top-8 -left-6 hidden md:block animate-float-slow">
-              <div className="bg-gradient-to-tr from-fuchsia-500 to-yellow-300 rounded-full w-6 h-6 blur-md opacity-70" />
-            </div>
-            <div className="absolute bottom-[-40px] right-0 hidden md:block animate-float-fast">
-              <div className="bg-gradient-to-r from-cyan-400 to-sky-600 w-10 h-10 rounded-lg blur-lg opacity-60" />
-            </div>
-            <div className="absolute -top-16 right-10 hidden md:block animate-pulse">
-              <span className="text-xs px-3 py-1 bg-white/10 border border-white/20 rounded-full text-white backdrop-blur-sm shadow">
-                🚀 10,000+ Makers joined
+        <div className="bg-whie relative z-10 flex flex-col md:flex-row  justify-between gap-12  px-6 md:px-12 py-10 max-w-7xl mx-auto">
+          {/* LEFT: Headline + Description + Actions */}
+          <div className="w-full md:w-1/2 space-y-8 ">
+            {/* Social Proof */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1 text-sm text-muted-foreground">
+              <Users className="h-4 w-4 text-primary" />
+              <span>
+                <strong className="text-foreground">10,000+</strong> makers
+                joined
               </span>
             </div>
 
-            {/* GRADIENT HEADING */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent leading-tight drop-shadow-md">
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
               Build. Share. Inspire.
             </h1>
 
-            {/* SUBTEXT */}
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Dive into the world of DIY tech. Create your own robots, share
-              tutorials, and get inspired by fellow makers across the globe.
+            {/* Subtext */}
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl">
+              Document your DIY projects, publish tutorials, and connect with a
+              global community of makers.
             </p>
 
-            {/* BADGE STRIP / MINI UI */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 text-sm text-white/80">
-              <span className="px-3 py-1 bg-purple-600/20 border border-purple-500/30 rounded-full shadow-sm backdrop-blur-md">
-                🛠️ No-code + Hardware Friendly
+            {/* Quick Features */}
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1 text-sm text-muted-foreground">
+                <Cpu className="h-4 w-4 text-primary" />
+                No-code + Hardware Friendly
               </span>
-              <span className="px-3 py-1 bg-pink-600/20 border border-pink-500/30 rounded-full shadow-sm backdrop-blur-md">
-                🌐 Community Powered
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1 text-sm text-muted-foreground">
+                <Globe className="h-4 w-4 text-primary" />
+                Community Powered
               </span>
-              <span className="px-3 py-1 bg-yellow-500/20 border border-yellow-400/30 rounded-full shadow-sm backdrop-blur-md">
-                📦 100+ DIY Projects
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1 text-sm text-muted-foreground">
+                <Boxes className="h-4 w-4 text-primary" />
+                100+ DIY Projects
               </span>
             </div>
 
-            {/* CTA BUTTONS */}
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
-              <Link href="/create">
-                <button className="px-6 py-3 rounded-xl text-white bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 shadow-lg hover:brightness-110 transition">
-                  Share Your Project
-                </button>
-              </Link>
-              <Link href="/all">
-                <button className="px-6 py-3 rounded-xl border border-white/20 bg-white/10 text-white hover:bg-white/20 transition">
-                  Explore Projects
-                </button>
-              </Link>
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button asChild size="lg">
+                <Link href="/create">Share Your Project</Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/all">Explore Projects</Link>
+              </Button>
             </div>
           </div>
-          {/* LEFT: Code Editor Mockup */}
-          <div className="w-full md:w-1/2 max-w-full lg:max-w-xl xl:max-w-2xl">
+
+          {/* RIGHT: Mockup */}
+          <div className="w-full md:w-1/2 max-w-full lg:max-w-xl xl:max-w-2xl hidden md:block ">
             <TerminalMockUp />
           </div>
         </div>
       </div>
 
       {/* CARDS & POSTS */}
-      <div className="container px-4 md:px-6 py-12 md:py-20 lg:py-24 space-y-16 md:space-y-24">
+      <div className="container px-4 md:px-6 py-16 md:py-24 space-y-20 md:space-y-24">
         <HeroHighlights />
         <FeaturedPosts />
       </div>

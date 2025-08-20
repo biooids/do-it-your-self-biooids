@@ -321,7 +321,7 @@ const TerminalMockUp: React.FC = React.memo(() => {
   }, [isPaused]);
 
   return (
-    <div className="p-8">
+    <div>
       <div className="bg-gray-900/80 rounded-lg border border-gray-700/50 overflow-hidden">
         <div className="bg-gray-800/80 px-4 py-2 flex items-center justify-between border-b border-gray-700/50">
           <div className="flex items-center space-x-2">

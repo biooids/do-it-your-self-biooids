@@ -411,7 +411,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/media/biooids/WD/CS50/projects/2-DIY/doityourself/server/prisma/generated/prisma",
+      "value": "/media/biooids/WD/CS50/projects/1-finished/3-doityourself/server/prisma/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -425,7 +425,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/media/biooids/WD/CS50/projects/2-DIY/doityourself/server/prisma/schema.prisma",
+    "sourceFilePath": "/media/biooids/WD/CS50/projects/1-finished/3-doityourself/server/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

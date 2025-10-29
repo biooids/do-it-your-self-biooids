@@ -325,11 +325,6 @@ const TerminalMockUp: React.FC = React.memo(() => {
       <div className="bg-gray-900/80 rounded-lg border border-gray-700/50 overflow-hidden">
         <div className="bg-gray-800/80 px-4 py-2 flex items-center justify-between border-b border-gray-700/50">
           <div className="flex items-center space-x-2">
-            <div className="flex space-x-1">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            </div>
             <div className="flex items-center space-x-2 ml-4">
               <Terminal size={16} className="text-gray-400" />
               <span className="text-sm text-gray-400">biooids-terminal</span>
